@@ -1,5 +1,5 @@
 cabal-version:       >=2.4.1.0
-name:                remove-comments
+name:                remove-c-comments
 version:             0.0.1
 license:             PublicDomain
 author:              OC4

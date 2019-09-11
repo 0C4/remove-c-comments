@@ -27,7 +27,7 @@ import System.Posix.Env.ByteString (getArgs)
 
 type FilePath = ByteString
 
--- `S` a state token used for `removeComments`
+-- | @S@ a state token used for `removeComments`
 data S = MaybeComment          -- encountered a '/' in normal text
        | SingleLineComment     -- in single line comment
        | BlockCommentWithNL    -- in block comment without newline char yet
@@ -40,7 +40,7 @@ data S = MaybeComment          -- encountered a '/' in normal text
        | NormalSrc             -- regular source
        deriving Eq
 
--- | `removedComments` removes any C-style comments from a bytestring,
+-- | @removedComments@ removes any C-style comments from a bytestring,
 -- returning the final state for exception handling.
 removeCComments :: ByteString -> (ByteString, S)
 removeCComments (PS fp off len) =
@@ -121,7 +121,7 @@ removeCComments (PS fp off len) =
     {-# INLINABLE update #-}
 
     isEndOfLine :: Word8 -> Bool
-    isEndOfLine b       = b == 13 || b == 10
+    isEndOfLine b = b == 13 || b == 10
     {-# INLINE isEndOfLine #-}
 {-# INLINABLE removeCComments #-}
 
