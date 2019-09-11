@@ -1,0 +1,17 @@
+cabal-version:       >=2.4.1.0
+name:                remove-comments
+version:             0.0.1
+license:             PublicDomain
+author:              OC4
+maintainer:          dheras@protonmail.com
+category:            Text
+build-type:          Simple
+extra-source-files:  CHANGELOG.md
+
+executable remove-comments
+  main-is:             remove-comments.hs
+  build-depends:       base >=4.13 && <4.14
+                       extra >=1.6
+                       bytestring >=0.10.8.2
+                       unix >=2.7.2.2
+  default-language:    Haskell2010
